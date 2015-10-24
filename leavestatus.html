@@ -1,0 +1,115 @@
+<html>
+<style>
+header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+    font-size: 250%;	 
+}
+content {
+    width:100%;
+    float:left;
+    padding:10px;
+    font-size: 125%;	 	 
+}
+
+footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+
+</style>
+
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/themes/smoothness/jquery-ui.css" />
+<link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
+
+<script>
+
+function populatestatus(){
+
+	var usrname = localStorage.getItem('username');
+	var issuper = parseInt(localStorage.getItem('issup'));
+	$('#curruser').text(usrname);
+	var $table = $('table.leavestatus');
+	// now get the data from the database and append it to the table
+	$.ajaxSetup( { "async": false } );
+	$.getJSON("getleavestatus.php", {id: localStorage.getItem('username')}, function(data){
+		$.each(data,function(index,item) 
+		{
+
+		  var newRow = '<tr>' + 
+					   '<td>' + item.RequestID + '</td>' + 
+					   '<td>' + item.TimeStamp + '</td>' + 
+					   '<td>' + item.LeaveType + '</td>' + 
+					   '<td>' + item.LeaveStart + '</td>' + 
+					   '<td>' + item.LeaveEnd + '</td>' + 
+					   '<td>' + item.Status + '</td>' +
+					   '</tr>';
+		  $('#leavestatus1 tr:last').after(newRow);
+		}); 
+	});
+	$.ajaxSetup( { "async": true } );
+	$('#leavestatus1').dataTable();
+}
+</script>
+
+<script> 
+$(document).ready(function() {
+	if (localStorage.getItem("username") === null) {
+  	//	$("input[type=button]").hide();
+  		window.open("index.html","_self");
+	} else {	
+		
+		populatestatus();
+    }
+    
+    
+});
+
+</script>
+</head>
+
+
+<header>Green Leaf Airconditioning Services LLC<br>
+<br><input type="button" value="Main Page" id="mainpage">    <input type="button" value="Logoff" id="logoff">
+</header>
+
+<form id="statusform">
+<div id='forminput'>
+<label id="curruser"></label><br>
+
+<table id="leavestatus1" class="display" cellspacing="0" width="100%">
+  <tr>
+        <th>Request ID</th>
+        <th>Application Date</th>
+        <th>Leave Type</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Status</th>
+  </tr>
+  <tbody></tbody>
+</table>  
+
+</form>
+
+<script>
+$('#mainpage').click(function(){
+      window.open("index.html","_self");
+});
+
+$('#logoff').click(function(){
+   localStorage.clear();
+   window.open("index.html","_self");
+});
+
+</script>
+</html>
