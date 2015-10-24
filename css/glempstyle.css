@@ -1,0 +1,107 @@
+/*!
+ * Start Bootstrap - Logo Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+body {
+    padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+.navbar-fixed-top .nav {
+    padding: 25px 0;
+}
+
+.navbar-fixed-top {
+  background-color: #3ce7d8;
+  border-color: #c0392b;
+}
+.navbar-fixed-top .navbar-brand {
+  padding: 0 25px;
+  color: #000607;
+}
+.navbar-fixed-top .navbar-brand:hover, .navbar-fixed-top .navbar-brand:focus {
+  color: #ffbbbc;
+}
+.navbar-fixed-top .navbar-text {
+  color: #000607;
+}
+.navbar-fixed-top .navbar-nav > li > a {
+  color: #000607;
+}
+.navbar-fixed-top .navbar-nav > li > a:hover, .navbar-fixed-top .navbar-nav > li > a:focus {
+  color: #ffbbbc;
+}
+.navbar-fixed-top .navbar-nav > .active > a, .navbar-fixed-top .navbar-nav > .active > a:hover, .navbar-fixed-top .navbar-nav > .active > a:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+}
+.navbar-fixed-top .navbar-nav > .open > a, .navbar-fixed-top .navbar-nav > .open > a:hover, .navbar-fixed-top .navbar-nav > .open > a:focus {
+  color: #ffbbbc;
+  background-color: #c0392b;
+}
+.navbar-fixed-top .navbar-toggle {
+  border-color: #c0392b;
+}
+.navbar-fixed-top .navbar-toggle:hover, .navbar-fixed-top .navbar-toggle:focus {
+  background-color: #c0392b;
+}
+.navbar-fixed-top .navbar-toggle .icon-bar {
+  background-color: #000607;
+}
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-top .navbar-form {
+  border-color: #000607;
+}
+.navbar-fixed-top .navbar-link {
+  color: #000607;
+}
+.navbar-fixed-top .navbar-link:hover {
+  color: #ffbbbc;
+}
+
+.spacer2 { height: 2px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer5 { height: 5px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer10 { height: 10px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer15 { height: 15px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer20 { height: 20px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer25 { height: 25px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer30 { height: 30px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer35 { height: 35px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer40 { height: 40px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer45 { height: 45px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer50 { height: 50px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer100 { height: 100px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+.spacer200 { height: 200px; width: 100%; font-size: 0; margin: 0; padding: 0; border: 0; display: block; }
+
+.glbullet {
+  margin: 0;
+  padding: 3px;
+  list-style-type: none;
+}
+
+.glbullet li {
+  background: #fff url("../img/GLbullet.png") 0 3px no-repeat;
+  padding-left: 25px
+}
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 967px) {
+  body {
+        padding-top: 300px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+  }
+  .navbar-fixed-top .navbar-nav .open .dropdown-menu > li > a {
+    color: #000607;
+  }
+  .navbar-fixed-top .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-fixed-top .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffbbbc;
+  }
+  .navbar-fixed-top .navbar-nav .open .dropdown-menu > .active > a, .navbar-fixed-top .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-fixed-top .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffbbbc;
+    background-color: #c0392b;
+  }
+}
